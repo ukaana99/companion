@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "launch-all-devices",
+      "dependsOn": [
+        "launch-ios",
+        "launch-android",
+        "launch-web",
+        "launch-macos"
+      ]
+    },
+    {
+      "label": "launch-ios",
+      "type": "shell",
+      "command": "flutter run -d 'iPhone 15'"
+    },
+    {
+      "label": "launch-android",
+      "type": "shell",
+      "command": "flutter run -d 'sdk gphone64 arm64'"
+    },
+    {
+      "label": "launch-web",
+      "type": "shell",
+      "command": "flutter run -d 'Chrome'"
+    },
+    {
+      "label": "launch-macos",
+      "type": "shell",
+      "command": "flutter run -d 'macOS'"
+    }
+  ]
+}
